@@ -11,7 +11,7 @@ LABELS_PATH = 'model_classes.txt'
 
 
 def load_image():
-    uploaded_file = st.file_uploader(label='Pick an image to test')
+    uploaded_file = st.file_uploader(label='Upload a Chest X-Ray')
     if uploaded_file is not None:
         image_data = uploaded_file.getvalue()
         st.image(image_data)
@@ -61,7 +61,7 @@ def predict(model, categories, image):
 
 
 def main():
-    st.title('Tuberculosis Detecttion from Chest X-Ray Images')
+    st.title('Tuberculosis Detection from Chest X-Ray Images')
     model = load_model(MODEL_PATH)
     categories = load_labels(LABELS_PATH)
     image = load_image()
