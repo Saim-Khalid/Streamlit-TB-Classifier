@@ -52,7 +52,7 @@ def predict(model, categories, image):
     _, max_catid = torch.max(probabilities, dim=0)
     # Get the class name corresponding to the index
     max_class = categories[max_catid]
-    st.write(f"Predicted class: {max_class}")
+    st.write(f"Predicted Result: {max_class}")
 
 
     #all_prob, all_catid = torch.topk(probabilities, len(categories))
